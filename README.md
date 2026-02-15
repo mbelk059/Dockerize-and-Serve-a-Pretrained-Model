@@ -59,13 +59,6 @@ docker run -p 5000:5000 YOUR_USERNAME/sentiment-model-server:latest
 - Input: `{"text": "your text here"}`
 - Output: `{"input_text": "...", "prediction": {"label": "POSITIVE/NEGATIVE", "score": 0.99}}`
 
-## Files
-
-- `app.py` - Flask application
-- `Dockerfile` - Docker configuration
-- `docker-compose.yml` - Docker Compose file
-- `requirements.txt` - Python dependencies
-
 ## Model
 
 - **Model**: distilbert-base-uncased-finetuned-sst-2-english
