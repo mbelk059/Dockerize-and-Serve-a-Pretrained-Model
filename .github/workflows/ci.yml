@@ -30,13 +30,7 @@ jobs:
 
       - name: Run tests
         run: |
-          # Create a dummy model for CI testing (real model used in production)
-          python -c "
-import torch
-from model.unet import UNet
-model = UNet()
-torch.save(model.state_dict(), 'saved_model.pth')
-"
+          python -c "import torch; from model.unet import UNet; model = UNet(); torch.save(model.state_dict(), 'saved_model.pth')"
           pytest tests/ -v
         env:
           PYTHONPATH: .
