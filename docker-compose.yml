@@ -1,9 +1,10 @@
-version: '3.8'
-
 services:
-  model-server:
+  segmentation-server:
     build: .
-    image: sentiment-model-server:latest
+    image: house-segmentation-api:latest
     ports:
       - "5000:5000"
+    environment:
+      - MODEL_PATH=/app/saved_model.pth
+      - PORT=5000
     restart: unless-stopped
